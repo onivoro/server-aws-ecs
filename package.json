@@ -1,6 +1,6 @@
 {
     "name": "@onivoro/server-aws-ecs",
-    "version": "22.0.0",
+    "version": "22.1.0",
     "repository": {
         "url": "git+https://github.com/onivoro/server-aws-ecs.git"
     },
