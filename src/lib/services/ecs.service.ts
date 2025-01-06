@@ -7,7 +7,7 @@ export class EcsService {
 
   constructor(private ecsClient: ECS) { }
 
-  runTasks(_: { taskDefinition: string, subnets: string, securityGroups: string, taskCount: number, cluster: string } & RunTaskCommandInput['overrides']): Promise<Array<RunTaskCommandOutput>> {
+  runTasks(_: { taskDefinition: string, subnets: string, securityGroups: string, taskCount: number, cluster: string } & Pick<RunTaskCommandInput,'overrides'>): Promise<Array<RunTaskCommandOutput>> {
     const { taskDefinition, subnets, securityGroups, taskCount, cluster } = _;
     try {
       const params: RunTaskCommandInput = {
